@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\aybar\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\aybar\\.nuget\\packages"
+    ]
+  }
+}

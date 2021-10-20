@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = "New Wedding";
+}
+@model Wedding
+
+<div class="p-5 d-flex justify-content-between w-100 mx-auto">
+    <h1><a href="/dashboard" class="btn btn-primary m-5">Home</a>
+    Plan your Wedding!!
+    <a href="/logout" class="btn btn-outline-danger m-5">Logout</a></h1>
+</div>
+
+<div>
+    <form asp-action="CreateWedding" asp-controller="Home" method="post">
+        <input type="hidden" asp-for="CreatorId" value="@ViewBag.CreatorId">
+
+        <div class="form-group">
+            <label asp-for="WedderOne"></label>
+            <input class="form-control" asp-for="WedderOne">
+            <span asp-validation-for="WedderOne" class="alert-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="WedderTwo"></label>
+            <input class="form-control" asp-for="WedderTwo">
+            <span asp-validation-for="WedderTwo" class="alert-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Date"></label>
+            <input class="form-control" asp-for="Date">
+            <span asp-validation-for="Date" class="alert-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Address"></label>
+            <input class="form-control" asp-for="Address">
+            <span asp-validation-for="Address" class="alert-danger"></span>
+        </div>
+
+        <input type="submit" class="btn btn-lg btn-success mx-auto">
+    </form>
+</div>

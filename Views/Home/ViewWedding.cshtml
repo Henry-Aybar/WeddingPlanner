@@ -1,0 +1,25 @@
+@{
+    ViewData["Title"] = "View Wedding";
+}
+@model Wedding
+
+<div class="p-5 d-flex justify-content-between w-100 mx-auto">
+    <h1><a href="/dashboard" class="btn btn-primary m-5">Home</a>
+    @ViewBag.SingleWedding.WedderOne and @ViewBag.SingleWedding.WedderTwo's Wedding
+    <a href="/logout" class="btn btn-outline-danger m-5">Logout</a></h1>
+</div>
+<div class="d-flex justify-content-between w-75 mx-auto">
+    <h3>Save the Date: @ViewBag.SingleWedding.Date</h3>
+</div>
+
+
+<h4>Attending Guests:</h4>
+<ul>
+    @{
+        foreach(Rsvp wed in ViewBag.SingleWedding.Rsvp)
+        {
+            <li>@wed.User.FirstName @wed.User.LastName</li>
+        }
+    }
+</ul>
+
